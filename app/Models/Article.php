@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
@@ -25,5 +26,9 @@ class Article extends Model
     public function category()
     {
         return $this->belongsTo(ArticleCategory::class);
+    }
+    public function getFormattedPublishedAtAttribute()
+    {
+        return Carbon::parse($this->published_at)->translatedFormat('j F Y');
     }
 }
