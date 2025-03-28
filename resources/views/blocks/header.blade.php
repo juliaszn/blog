@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-3 search-top">
                     <!-- <a href="#"><span class="fa fa-search"></span></a> -->
-                    <form action="#" class="search-top-form">
+                    <form action="{{route('article.search')}}" class="search-top-form" method="GET">
                         <span class="icon fa fa-search"></span>
-                        <input type="text" id="s" placeholder="Type keyword to search...">
+                        <input type="text" name="query" placeholder="Search...">
                     </form>
                 </div>
             </div>
@@ -23,7 +23,7 @@
         <div class="row pt-5">
             <div class="col-12 text-center">
                 <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-                <h1 class="site-logo"><a href="/assets/index.html">Travel Blog</a></h1>
+                <h1 class="site-logo"><a href="{{route('home')}}">Travel Blog</a></h1>
             </div>
         </div>
     </div>

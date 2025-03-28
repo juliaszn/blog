@@ -14,6 +14,8 @@ Route::get('/blog/{category}', [ArticleController::class, 'category'])->name('ar
 
 Route::get('/blog/{category}/{article}', [ArticleController::class, 'show'])->name('article.show');
 
+Route::get('/search/', [ArticleController::class, 'search'])->name('article.search');
+
 
 
 

@@ -11,7 +11,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::query()->latest('published_at')->get();
+        $articles = Article::query()->where('active', true)->latest('published_at')->get();
         return view('article.index', compact('articles'));
     }
 
@@ -19,15 +19,29 @@ class ArticleController extends Controller
     {
         $category = ArticleCategory::query()->where('slug', $category)->firstOrFail();
 
-        $articles = Article::where('active', true)->where('category_id', $category->id)->latest('published_at')->get();
+        $articles = Article::query()->where('active', true)->where('category_id', $category->id)->latest('published_at')->get();
 
         return view('article.index', compact('articles', 'category'));
     }
 
     public function show($category, $article)
     {
-        $article = Article::where('slug', $article)->firstOrFail();
+        $article = Article::query()->where('slug', $article)->firstOrFail();
 
         return view('article.show', compact('article'));
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        if(!$query || $query==''){
+            abort(404, 'No results');
+        }
+
+        $articles = Article::query()->where('title', 'LIKE', '%' . $query . '%')
+            ->orWhere('detail_text', 'LIKE', '%' . $query . '%')
+            ->get();
+        return view('article.index', compact('articles', 'query'));
+    }
+
 }

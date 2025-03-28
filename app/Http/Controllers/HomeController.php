@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $articles = Article::get();
-        return view('article.index', compact('articles'));
+        $articles = Article::query()->where('active', true)->latest('published_at')->get();
+        return view('index', compact('articles'));
     }
 
     public function about() {
