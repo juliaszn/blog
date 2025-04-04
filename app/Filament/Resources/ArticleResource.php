@@ -123,8 +123,9 @@ class ArticleResource extends Resource
             'edit' => Pages\EditArticle::route('/{record}/edit'),
         ];
     }
+
     public static function CategoryOptions()
     {
-      return ArticleCategory::query()->pluck('title', 'id');
+        return ArticleCategory::query()->pluck('title', 'id');
     }
 }

@@ -19,7 +19,9 @@ class ArticleController extends Controller
     {
         $category = ArticleCategory::query()->where('slug', $category)->firstOrFail();
 
-        $articles = Article::query()->where('active', true)->where('category_id', $category->id)->latest('published_at')->get();
+        $articles = Article::query()->where('active', true)->where('category_id', $category->id)->latest(
+            'published_at'
+        )->get();
 
         return view('article.index', compact('articles', 'category'));
     }
@@ -34,7 +36,7 @@ class ArticleController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        if(!$query || $query==''){
+        if (!$query || $query == '') {
             abort(404, 'No results');
         }
 

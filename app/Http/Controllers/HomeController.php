@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $articles = Article::query()->where('active', true)->latest('published_at')->get();
         return view('index', compact('articles'));
     }
 
-    public function about() {
-        return 'about';
+    public function about()
+    {
+        return view('about');
     }
 }

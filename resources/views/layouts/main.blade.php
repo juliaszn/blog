@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Blog Template</title>
+    <title>Travel Blog</title>
+    <meta name="description" content="Blog about travel and news from different parts of the world">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -14,8 +15,6 @@
     <link rel="stylesheet" href="/assets/fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/advanced.css">
 </head>
@@ -32,7 +31,6 @@
 
 </div>
 
-<!-- loader -->
 <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
 <script src="/assets/js/jquery-3.2.1.min.js"></script>

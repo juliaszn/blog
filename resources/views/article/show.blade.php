@@ -20,7 +20,7 @@
 
 
                     <div class="pt-5">
-                        <p>Categories:  <a href="#">{{$article->category->title}}</a>
+                        <p>Categories: <a href="#">{{$article->category->title}}</a>
                     </div>
                 </div>
 

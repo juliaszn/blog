@@ -89,10 +89,10 @@ header {
           header .navbar .dropdown-menu:before {
             display: none; } }
       header .navbar .dropdown-menu .dropdown-item:hover {
-        background: #6610f2;
+        background: #163832;
         color: #fff; }
       header .navbar .dropdown-menu .dropdown-item.active {
-        background: #6610f2;
+        background: #235347;
         color: #fff; }
       header .navbar .dropdown-menu a {
         padding-top: 7px;
@@ -149,7 +149,7 @@ header {
 
 .category {
   display: inline-block;
-  background: #0b0b0b;
+  background: #163832;
   padding: 2px 8px;
   line-height: 1.5;
   font-size: 12px;
@@ -535,8 +535,8 @@ textarea.form-control {
     color: #fff;
     border-width: 2px; }
     .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
-      border-color: #8540f5;
-      background: #8540f5; }
+      border-color: #30725f;
+      background: #30725f; }
   .btn.btn-sm {
     font-size: 14px; }
   .btn.btn-outline-primary {
@@ -818,7 +818,7 @@ textarea.form-control {
       background: #f2f2f2; }
       .tags li a:hover {
         color: #fff;
-        background: #6610f2; }
+        background: #30725f; }
 
 .pagination {
   margin-bottom: 5em;
@@ -846,6 +846,7 @@ textarea.form-control {
         border: 1px solid transparent; }
     .pagination li.active a {
       border: 1px solid transparent !important; }
+
 
 .categories, .sidelink {
   padding: 0;
@@ -1169,7 +1170,7 @@ textarea.form-control {
       width: 150px;
       min-width: 150px; } }
   .search-top input:active, .search-top input:focus {
-    background: #3d0894;
+    background: #30725f;
     outline: none; }
 
 .post-entry-sidebar .post-meta {
@@ -1249,7 +1250,7 @@ blockquote {
   background-position: center center;
   background-repeat: no-repeat;
   padding: 5em 0;
-  background: #262626; }
+  background: #163832; }
   .site-footer .post-entry-sidebar ul li a h4 {
     color: #fff; }
   .site-footer .footer-social li a > span {
@@ -1371,3 +1372,4 @@ blockquote {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+

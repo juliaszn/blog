@@ -1,31 +1,20 @@
 <div class="col-md-12 col-lg-4 sidebar">
-    <div class="sidebar-box search-form-wrap">
-        <form action="#" class="search-form">
-            <div class="form-group">
-                <span class="icon fa fa-search"></span>
-                <input type="text" class="form-control" id="s" placeholder="Type a keyword and hit enter">
-            </div>
-        </form>
-    </div>
-    <!-- END sidebar-box -->
     <div class="sidebar-box">
         <div class="bio text-center">
-            <img src="images/person_2.jpg" alt="Image Placeholder" class="img-fluid">
             <div class="bio-body">
-                <h2>Craig David</h2>
+                <h2>Social networks</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus
                     excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.</p>
-                <p><a href="#" class="btn btn-primary btn-sm rounded">Read my bio</a></p>
                 <p class="social">
-                    <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
-                    <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
-                    <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
-                    <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
+                    <a href="https://www.facebook.com" class="p-2"><span class="fa fa-facebook"></span></a>
+                    <a href="https://twitter.com" class="p-2"><span class="fa fa-twitter"></span></a>
+                    <a href="https://www.instagram.com" class="p-2"><span class="fa fa-instagram"></span></a>
+                    <a href="https://www.youtube.com" class="p-2"><span class="fa fa-youtube-play"></span></a>
+                <p><a href="{{route('home')}}" class="btn btn-primary btn-sm rounded">Subscribe</a></p>
                 </p>
             </div>
         </div>
     </div>
-    <!-- END sidebar-box -->
     <div class="sidebar-box">
         <h3 class="heading">Popular Posts</h3>
         <div class="post-entry-sidebar">
@@ -44,16 +33,16 @@
                     </li>
                 @endforeach
 
-                <!-- END sidebar-box -->
-
                 <div class="sidebar-box">
                     <h3 class="heading">Categories</h3>
                     <ul class="categories">
                         @foreach($categories as $category)
-                            <li><a href="{{route('article.category', $category)}}">{{$category->title}}<span>{{$category->articles_count}}</span></a></li>
+                            <li><a href="{{route('article.category', $category->slug)}}"
+                                   class="category-link">{{$category->title}}<span>{{$category->articles_count}}</span></a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
-                <!-- END sidebar-box -->
+        </div>
 
-             </div>
+
